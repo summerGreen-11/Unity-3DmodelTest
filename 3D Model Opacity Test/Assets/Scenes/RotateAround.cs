@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RotateAround : MonoBehaviour
 {
@@ -12,15 +13,18 @@ public class RotateAround : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
-            xRotateMove = Input.GetAxis("Mouse X") * Time.deltaTime * rotateSpeed;
+            if (Input.GetMouseButton(0))
+            {
+                xRotateMove = Input.GetAxis("Mouse X") * Time.deltaTime * rotateSpeed;
 
-            Vector3 stagePosition = stage.transform.position;
+                Vector3 stagePosition = stage.transform.position;
 
-            transform.RotateAround(stagePosition, Vector3.up, xRotateMove);
+                transform.RotateAround(stagePosition, Vector3.up, xRotateMove);
 
-            transform.LookAt(stagePosition);
+                transform.LookAt(stagePosition);
+            }
         }
     }
 }
