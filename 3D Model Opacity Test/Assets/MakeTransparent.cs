@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MakeTransparent : MonoBehaviour
 {
     public GameObject currentGameObject;
-    public float alpha = 0.5f; //half transparency
+    public float alpha = 0.2f; //half transparency
     //Get current Material
     private Material currentMat;
 
@@ -21,7 +21,6 @@ public class MakeTransparent : MonoBehaviour
         Color oldColor = mat.color;
         Color newColor = new Color(oldColor.r, oldColor.g, oldColor.b, alphaVal);
         mat.SetColor("_Color", newColor);
-
     }
 
     public void ChangeAlphaOnValueChange(Slider slider)
