@@ -66,10 +66,10 @@ public class CameraControll : MonoBehaviour
         // 마우스 X,Y 이동
         if (Input.GetMouseButton(1))
         {
-            float t_posX = Input.GetAxis("Mouse X") * speed;
+            //float t_posX = Input.GetAxis("Mouse X") * speed;
             float t_posY = Input.GetAxis("Mouse Y") * speed;
 
-            transform.position += new Vector3(t_posX, t_posY, 0);
+            transform.position += new Vector3(0, t_posY, 0);
         }
     }
 
