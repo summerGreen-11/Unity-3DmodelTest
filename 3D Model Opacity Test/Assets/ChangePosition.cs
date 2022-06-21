@@ -7,12 +7,12 @@ public class ChangePosition : MonoBehaviour
 {
     public Slider slider;
     public Transform objectTransform;
-    private Vector3 position1 = new Vector3(-3010, -4020, 54);
-    private Vector3 position2 = new Vector3(-3010, -2252, 54);
+    private Vector3 position1 = new Vector3(0, -1828, 0);
+    private Vector3 position2 = new Vector3(0, 50, 0);
 
     private void Start()
     {
-        objectTransform.position = new Vector3(-3010, -4020, 54);
+        objectTransform.position = new Vector3(0, -1828, 0);
         // Make sure the slider value is clamped between 0 and 1
         slider.onValueChanged.AddListener(UpdatePosition);
     }
