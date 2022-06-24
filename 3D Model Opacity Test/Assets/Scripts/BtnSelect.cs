@@ -24,7 +24,7 @@ public class BtnSelect : MonoBehaviour
         if (x < 1) //x가 0인 경우
         {
             x++; //x=1
-            maskObj[x].GetComponent<MeshRenderer>().material.renderQueue = 3015;
+            maskObj[x].GetComponent<MeshRenderer>().material.renderQueue = 3017;
 
             Obj[0].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
             Obj[1].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
@@ -48,7 +48,7 @@ public class BtnSelect : MonoBehaviour
         if (x < 1)
         {
             x++;
-            maskObj[x].GetComponent<MeshRenderer>().material.renderQueue = 3014;
+            maskObj[x].GetComponent<MeshRenderer>().material.renderQueue = 3015;
 
             Obj[0].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
             Obj[1].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
