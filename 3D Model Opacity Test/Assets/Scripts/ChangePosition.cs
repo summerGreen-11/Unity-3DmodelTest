@@ -7,12 +7,15 @@ public class ChangePosition : MonoBehaviour
 {
     public Slider slider;
     public Transform objectTransform;
-    private Vector3 position1 = new Vector3(0, -1828, 0);
-    private Vector3 position2 = new Vector3(0, 50, 0);
+    public Transform planeTransform;
+    public Renderer planeRenderer;
+    private Vector3 position1 = new Vector3(-260, -999, 80);
+    private Vector3 position2 = new Vector3(-260, 702, 80);
 
     private void Start()
     {
-        objectTransform.position = new Vector3(0, -1828, 0);
+        objectTransform.position = new Vector3(-260, -999, 80);
+        planeTransform.position = new Vector3(-249, 1, 135);
         // Make sure the slider value is clamped between 0 and 1
         slider.onValueChanged.AddListener(UpdatePosition);
     }
@@ -21,5 +24,11 @@ public class ChangePosition : MonoBehaviour
     {
         Vector3 newPosition = Vector3.Lerp(position1, position2, value);
         objectTransform.position = newPosition;
+        planeTransform.position = new Vector3(-249, objectTransform.position.y+999, 135);
+        int planePosY = (1702-(int)(objectTransform.position.y + 1000) - 1) * 5;
+        string fmt = "0000";
+        string Texnum =  planePosY.ToString(fmt);
+        Texture2D texture = Resources.Load<Texture2D>("Textures/"+ Texnum);
+        planeRenderer.material.mainTexture = texture;
     }
 }
