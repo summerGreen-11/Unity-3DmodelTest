@@ -8,7 +8,7 @@ public class CameraControll : MonoBehaviour
     public GameObject stage;
 
     //Rotate
-    private float xRotateMove, yRotateMove;
+    private float xRotateMove;
 
     public float rotateSpeed = 500.0f;
 
@@ -18,7 +18,7 @@ public class CameraControll : MonoBehaviour
     public float zoomSpeed = 1.0f;
     public float distance;
 
-    //¸¶¿ì½º »óÇÏÁÂ¿ì ÄÁÆ®·Ñ ½ºÇÇµå 
+    //?????? ???????? ?????? ?????? 
     public float speed = 5.0f;
 
 
@@ -36,21 +36,27 @@ public class CameraControll : MonoBehaviour
             {
                 xRotateMove = Input.GetAxis("Mouse X") * Time.deltaTime * rotateSpeed;
 
-                Vector3 stagePosition = stage.transform.position;
+                Vector3 stagePosition = stage.transform.position; //ë¬¼ì²´ ì¤‘ì‹¬ ì¢Œí‘œ 
 
                 transform.RotateAround(stagePosition, Vector3.up, xRotateMove);
 
                 transform.LookAt(stagePosition);
             }
+
+
+        }
+
+        // ?????? X,Y ????
+        if (Input.GetMouseButton(1))
+        {
+            //float t_posX = Input.GetAxis("Mouse X") * speed;
+            float t_posY = Input.GetAxis("Mouse Y") * speed;
+
+            transform.position += new Vector3(0, t_posY, 0);
         }
 
 
-    }
-
-
-    void LateUpdate()
-    {
-        // ÈÙ¸¶¿ì½º (PC¿¡¼­¸¸ ÀÛµ¿) ÁÜÀÎ ÁÜ¾Æ¿ô
+        // ???????? (PC?????? ????) ???? ??????
         if (Input.GetAxis("Mouse ScrollWheel") < 0 && distance < maxDist)
         {
             distance += zoomSpeed;
@@ -63,14 +69,9 @@ public class CameraControll : MonoBehaviour
             Camera.main.GetComponent<Camera>().orthographicSize = distance;
         }
 
-        // ¸¶¿ì½º X,Y ÀÌµ¿
-        if (Input.GetMouseButton(1))
-        {
-            //float t_posX = Input.GetAxis("Mouse X") * speed;
-            float t_posY = Input.GetAxis("Mouse Y") * speed;
 
-            transform.position += new Vector3(0, t_posY, 0);
-        }
     }
+
+
 
 }
