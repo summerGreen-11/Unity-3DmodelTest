@@ -4986,10 +4986,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 2000
+  far clip plane: 5000
   field of view: 123
   orthographic: 1
-  orthographic size: 1000
+  orthographic size: 1800
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5012,13 +5012,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -343, y: 904, z: 1911}
+  m_LocalRotation: {x: 0.009806082, y: 0.9268661, z: -0.3744782, w: 0.024270903}
+  m_LocalPosition: {x: -300, y: 2055, z: 1319}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 44, y: 177, z: 0}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5033,11 +5033,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: {fileID: 1967958107}
   rotateSpeed: 500
-  maxDist: 1300
-  minDist: 300
+  maxDist: 1800
+  minDist: 800
   zoomSpeed: 250
   distance: 0
-  speed: 30
+  speed: 100
 --- !u!1 &965348611
 GameObject:
   m_ObjectHideFlags: 0
@@ -5217,7 +5217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 966904495}
-  objectTransform: {fileID: 1115185938}
+  objectTransform: {fileID: 2128882420}
   planeTransform: {fileID: 1394946796}
   planeRenderer: {fileID: 1394946794}
 --- !u!1 &989228685
@@ -6242,7 +6242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1115185934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8114,8 +8114,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394946792}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: -249, y: 1702, z: 135}
-  m_LocalScale: {x: 48, y: 1, z: 23.5}
+  m_LocalPosition: {x: -249, y: 1702, z: 140}
+  m_LocalScale: {x: -49.23206, y: 1, z: 28.17074}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -11022,8 +11022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maskObj:
-  - {fileID: 1115185933}
-  - {fileID: 1115185933}
+  - {fileID: 2128882415}
+  - {fileID: 2128882415}
   Obj:
   - {fileID: 1308515695}
   - {fileID: 2039886038}
@@ -12323,7 +12323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2128882416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12410,8 +12410,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128882415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -260, y: -1000, z: 80}
-  m_LocalScale: {x: 1000, y: 2000, z: 1000}
+  m_LocalPosition: {x: -249, y: 2702, z: 139.9421}
+  m_LocalScale: {x: 490.6307, y: 2000, z: 280.7368}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
