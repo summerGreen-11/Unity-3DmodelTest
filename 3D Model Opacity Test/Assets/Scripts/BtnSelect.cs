@@ -32,25 +32,25 @@ public class BtnSelect : MonoBehaviour
 
     public void SelectSkin()
     {
-        if (x < 1) //x?? 0?? ????
+        //x는 0으로 시작
+
+        if (x < 1) 
         {
-            x++; //x=1
+            x++; //x가 1일 때
             maskObj[x].GetComponent<MeshRenderer>().material.renderQueue = 3017;
 
           
             Obj[0].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
-            Obj[1].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
-            Obj[2].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
+            
         }
         else 
         {
-            //x=1?? ???? ????
+            //x가 1에서 0으로 변경 
             x = 0;
             maskObj[x].GetComponent<MeshRenderer>().material.renderQueue = 3000;
 
             Obj[0].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
-            Obj[1].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
-            Obj[2].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
+           
         }
 
     }
@@ -64,7 +64,7 @@ public class BtnSelect : MonoBehaviour
 
             Obj[0].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
             Obj[1].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
-            Obj[2].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
+          
         }
         else
         {
@@ -73,7 +73,7 @@ public class BtnSelect : MonoBehaviour
 
             Obj[0].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
             Obj[1].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
-            Obj[2].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
+            
         }
     
     }

@@ -18,17 +18,20 @@ public class CameraControll : MonoBehaviour
     public float zoomSpeed = 1.0f;
     public float distance;
 
-    //?????? ???????? ?????? ?????? 
+    //Y
     public float speed = 5.0f;
 
 
     void Start()
     {
         distance = Camera.main.GetComponent<Camera>().orthographicSize;
+     
     }
 
     void Update()
     {
+        
+
         //Rotate
         if (!EventSystem.current.IsPointerOverGameObject())
         {
@@ -46,17 +49,18 @@ public class CameraControll : MonoBehaviour
 
         }
 
-        // ?????? X,Y ????
+     
         if (Input.GetMouseButton(1))
         {
             //float t_posX = Input.GetAxis("Mouse X") * speed;
             float t_posY = Input.GetAxis("Mouse Y") * speed;
 
             transform.position += new Vector3(0, t_posY, 0);
+           
         }
 
 
-        // ???????? (PC?????? ????) ???? ??????
+        //zoom
         if (Input.GetAxis("Mouse ScrollWheel") < 0 && distance < maxDist)
         {
             distance += zoomSpeed;
