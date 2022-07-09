@@ -53,7 +53,7 @@ public class CameraControll : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             //float t_posX = Input.GetAxis("Mouse X") * speed;
-            float t_posY = Input.GetAxis("Mouse Y") * speed;
+            float t_posY = Input.GetAxis("Mouse Y") * Time.deltaTime * speed;
 
             transform.position += new Vector3(0, t_posY, 0);
            
