@@ -39,14 +39,11 @@ public class BtnSelect : MonoBehaviour
             x++; //x가 1일 때
             maskObj[x].GetComponent<MeshRenderer>().material.renderQueue = 3017;
 
-
-            //버튼 색상
+          
             Obj[0].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
+            Obj[1].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
+            Obj[2].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
 
-
-            // 버튼 비활성화
-             Obj[1].GetComponent<Button>().interactable = false;
-            Obj[2].GetComponent<Button>().interactable = false;
         }
         else 
         {
@@ -54,12 +51,9 @@ public class BtnSelect : MonoBehaviour
             x = 0;
             maskObj[x].GetComponent<MeshRenderer>().material.renderQueue = 3000;
 
-            //버튼 색상
             Obj[0].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
-
-            //버튼 활성화
-            Obj[1].GetComponent<Button>().interactable = true;
-            Obj[2].GetComponent<Button>().interactable = true;
+            Obj[1].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
+            Obj[2].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
 
         }
 
@@ -74,9 +68,7 @@ public class BtnSelect : MonoBehaviour
 
             Obj[0].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
             Obj[1].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
-
-            Obj[0].GetComponent<Button>().interactable = false;
-            Obj[2].GetComponent<Button>().interactable = false;
+            Obj[2].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
         }
         else
         {
@@ -85,9 +77,7 @@ public class BtnSelect : MonoBehaviour
 
             Obj[0].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
             Obj[1].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
-
-            Obj[0].GetComponent<Button>().interactable = true;
-            Obj[2].GetComponent<Button>().interactable = true;
+            Obj[2].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
         }
     
     }
@@ -105,10 +95,7 @@ public class BtnSelect : MonoBehaviour
             Obj[1].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
             Obj[2].GetComponent<Image>().color = new Color(colorArray[0].r, colorArray[0].g, colorArray[0].b);
 
-            Obj[0].GetComponent<Button>().interactable = false;
-            Obj[1].GetComponent<Button>().interactable = false;
-
-        }
+    }
         else
         {
             x = 0;
@@ -117,10 +104,7 @@ public class BtnSelect : MonoBehaviour
             Obj[0].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
             Obj[1].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
             Obj[2].GetComponent<Image>().color = new Color(colorArray[1].r, colorArray[1].g, colorArray[1].b);
-
-            Obj[0].GetComponent<Button>().interactable = true;
-            Obj[1].GetComponent<Button>().interactable = true;
-        }
+         }
 
      }
 
