@@ -11518,7 +11518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e42ce910a39a64587d1e81c5354980, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 43
+      value: 98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8e42ce910a39a64587d1e81c5354980, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12246,9 +12246,9 @@ MonoBehaviour:
   - {fileID: 2128882415}
   - {fileID: 2128882415}
   Obj:
-  - {fileID: 1018530874}
-  - {fileID: 505626841}
-  - {fileID: 1943535474}
+  - {fileID: 1308515695}
+  - {fileID: 2039886038}
+  - {fileID: 2096987108}
   x: 0
   OnOffTxt: {fileID: 1562134197}
   colorArray:
