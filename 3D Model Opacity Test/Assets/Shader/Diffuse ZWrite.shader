@@ -8,7 +8,7 @@ Shader "Transparent/Diffuse ZWrite" {
 		LOD 200
 		// extra pass that renders to depth buffer only
 		Pass {
-		ZWrite Off
+		ZWrite On
 		ColorMask 0
 		}
 		// paste in forward rendering passes from Transparent/Diffuse
